@@ -11,23 +11,24 @@ const Venues = () => {
 
   return (
     <>
-      <h1 className="text-center">
+    <div className="card bg-light col-md-9 mx-auto mt-3 mb-5">
+      <h1 className="text-center bg-primary">
         Mater Dei College Venues
       </h1>
       {error && (
         <p className="text-danger text-center">Something wrong from the API</p>
       )}
       {loading && (
-        <div className=" text-center bg-primary text-darkcol-md">
+        <div className=" text-center bg-secondary text-darkcol-md">
           Loading Venues...
         </div>
       )}
-      <table className="table table-striped">
+      <table className="table table-striped text-center">
         <thead>
           <tr>
-          <td class="table-active">#</td>
+          <td class="table-dark">#</td>
               <td class="table-primary">Name</td>
-              <td class="table-dark">Building</td>
+              <td class="table-active">Building</td>
               <td class="table-secondary">Capacity</td>
           </tr>
         </thead>
@@ -35,12 +36,12 @@ const Venues = () => {
           {Object.keys(data)?.map((venue, index) => {
             return (
               <tr key={index} className="hover-effect">
-                <td class="table-active">{data[venue].id}</td>
+                <td class="table-dark">{data[venue].id}</td>
                 <td class="table-primary">{data[venue].name}</td>
-                <td class="table-dark">{data[venue].building}</td>
+                <td class="table-active">{data[venue].building}</td>
                 <td className="d-flex justify-content-between  align-items-center">
                   <div>{data[venue].capacity}</div>
-                  <Link to={`/venues/${data[venue].id}`} className="btn btn-sm btn-primary mt-1">
+                  <Link to={`/venues/${data[venue].id}`} className="btn btn-sm btn-primary mt-1 bg-dark">
                         View
                   </Link>
                 </td>
@@ -49,8 +50,12 @@ const Venues = () => {
           })}
         </tbody>
       </table>
+    </div>
     </>
+
+  
   );
 };
+
 
 export default Venues;

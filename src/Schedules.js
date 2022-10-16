@@ -29,7 +29,7 @@ const Schedules = () => {
   }, []);
   return (
     <>
-      <div className="card bg-light col-md-11 mx-auto mt-3 mb-5">
+      <div className="card bg-light col-md-9 mx-auto mt-3 mb-5">
         <h1 className="text-center w-100">
           Mater Dei College {venue.building}
         </h1>
