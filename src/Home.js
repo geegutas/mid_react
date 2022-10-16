@@ -8,7 +8,7 @@ const Home = () => {
             <h1 className="text-center m-4 "> 
             <img src="logo.jpg" alt="" width="90px" height="90px" position="center"
             
-            /> College Student (Study Loads) </h1> 
+            /> Mater Dei Student (Study Loads) </h1> 
             
             
         </div>
